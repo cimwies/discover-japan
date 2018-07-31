@@ -9,6 +9,7 @@ Udacity FEND Nanodegree Program - Project #8
 * Souces used in code
 * Info material
 * Image Credits
+* [Discover Japan Wiki](https://github.com/cimwies/discover-japan/wiki)
 
 ### Specification
 
