@@ -8,6 +8,7 @@ Udacity FEND Nanodegree Program - Project #8
 * How to view
 * Souces used in code
 * Info material
+* Image Credits
 
 ### Specification
 
@@ -86,5 +87,7 @@ For Python 3.x, the command is:
 * [module: react-router-dom](https://www.npmjs.com/package/react-router-dom)
 
 
+### Image Credits
 
+* [A complete list of all image credits is on this repositories Wiki Page Sources](https://github.com/cimwies/discover-japan/wiki/Sources)
 
