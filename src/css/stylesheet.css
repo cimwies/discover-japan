@@ -125,7 +125,6 @@ nav {
 }
 
 #close-btn {
-    background: transparent url(../icons/close.png) no-repeat center center;
     height: 48px;
     width: 48px;
     float: right;
@@ -181,7 +180,7 @@ hr {
 }
 
 .wiki-warning1 {
-    color: #777747;
+    color: #ea2e49;
 }
 
 .wiki-warning2 {

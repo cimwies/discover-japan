@@ -64,6 +64,8 @@ class Marker extends Component {
 
             infowindow.setContent('Loading...');
 
+            let wikiData = '';
+
             fetch(`https://en.wikipedia.org/w/api.php?origin=*&action=query&format=json&prop=extracts&titles=${wikipediaSource.replace(/\s/g, '_')}&exintro=1`, {
                 headers: {
                     'Origin': 'https://cimwies.github.io/',
@@ -72,7 +74,7 @@ class Marker extends Component {
             })
             .then(response => response.json())
             .then(response => {
-                let wikiData = '';
+                
                 let element = response.query.pages[Object.keys(response.query.pages)[0]];
                 wikiData = element.extract;
                 addWikiInfos(wikiData)
@@ -121,7 +123,7 @@ class Marker extends Component {
                                       </p>
                                       <hr />
                                       <h4 tabIndex="0">Infos</h4>
-                                      <div tabIndex="0"><p class="wiki-warning2">Unfortunately, no information was returned from Wikipedia.</p><div/>`);
+                                      <div tabIndex="0"><p class="wiki-warning2">oh no, there was an error in your request for ${part}.</p><div/>`);
             }            
             
             infowindow.marker = marker;

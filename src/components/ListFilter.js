@@ -28,14 +28,16 @@ class ListFilter extends Component {
 
         return (
             <aside className="list-wrapper" >
-                <button aria-label="Close button of filter list"  id="close-btn" className="close-list-wrapper-btn" onClick={() => this.closeList()}>
+                <button aria-label="Close the Sidebar"  id="close-btn" className="close-list-wrapper-btn" onClick={() => this.closeList()}>
+                     <img src={require(`../icons/close.png`)} alt="Close button" tabIndex="0" /> 
                 </button>
                 <h2 className="places">List of favorite places</h2>
                 <div className="list-wrapper-content">
-                    <ul tabIndex="0" role="tablist" aria-label="List of beautiful places" className="list-of-places">
+                    <ul className="list-of-places">
                         {locationsGoogle.filter( location => location.marker.visible === true).map((location, index) => (
                             <li tabIndex = "0" 
-                                role = "button" 
+                                role = "button"
+                                aria-label = {location.props.name}
                                 key = {index} 
                                 onKeyPress = {(event) => this.handlerKeyPress(event, location)}                                  
                                 onClick = {(e) => this.setMarker(location)}

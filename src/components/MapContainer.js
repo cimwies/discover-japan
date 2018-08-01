@@ -14,7 +14,7 @@ export default class MapContainer extends Component {
         return (
             <div className="main-container">
                 <ListFilter locationsGoogle={locationsGoogle} />
-                <main role="presentation"  aria-label="Map showing places" className="map-container">
+                <main role="application"  aria-label="Map showing places" className="map-container" tabIndex="-1">
                     <Map 
                         google = {google}
                         onChangeMarker = {onChangeMarker} 

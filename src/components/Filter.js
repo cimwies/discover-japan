@@ -23,13 +23,12 @@ class Filter extends Component {
                     <div className="navbar-form navbar-left" role="search">
                         <div className="form-group">
                             <input 
-                                aria-label = "Input to filter places:"
+                                aria-label = "Start typing to filter places"
                                 className = "form-control" 
                                 id = "search-input" 
                                 type = "search"  
                                 placeholder = "click here to filter"
                                 autoComplete= "Input to filter places"
-                                tabIndex = "1"
                                 onChange = {(event) => handleQuery(event.target.value)}
                                 onFocus = {() => this.showList()}
                                 />

@@ -79,7 +79,7 @@ class Map extends Component {
         const { onChangeMarker } = this.props;
 
         return (
-            <div ref='map' style={style} className="main-container" tabIndex="-1" >
+            <div ref='map' style={style} className="main-container" >
                 Loading map...
                 {locations.locations.map( (location, index) => (
                     <Marker   

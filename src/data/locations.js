@@ -117,15 +117,15 @@ export const locations = [
      {
           type: "Garden",
           icon: "./icons/Garden.png",
-          name: "Ōhashi-ke Secret Garden",
-          thumbnailSource: "./images/ohashi-ke.jpg",
-          source: "http://www.japanesegardens.jp/gardens/secret/000078.php",
-          wikipedia: "",
-          wikipediaSource: "",
-          authorImg: "Copyright © Real Japanese Gardens",
+          name: "The Gardens of Zenkō-ji Temple",
+          thumbnailSource: "./images/zenkoj-ji.jpg",
+          source: "https://www.zenkoji.jp/",
+          wikipedia: "https://en.wikipedia.org/wiki/Zenk%C5%8D-ji",
+          wikipediaSource: "Zenkō-ji",
+          authorImg: "https://commons.wikimedia.org/wiki/File:ZenkojiWP.jpg",
           coordinates: {
-               lat: "34.968563",
-               lng:"135.77239"
+               lat: "36.661667",
+               lng:"138.187778"
                }
      },
      {
