@@ -180,6 +180,14 @@ hr {
     padding-top: 5px;
 }
 
+.wiki-warning1 {
+    color: #777747;
+}
+
+.wiki-warning2 {
+    color: #ea2e49;
+}
+
 
 /* Media Queries */
 

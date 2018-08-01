@@ -105,7 +105,7 @@ class Marker extends Component {
                                   '</p>' +
                                   '<hr />' +
                                   '<h4 tabIndex="0">Infos</h4>' +
-                                  '<div tabIndex="0"><p class="wiki-warning">Sorry - Unfortunately, no information was returned from Wikipedia.</p><div/>';
+                                  '<div tabIndex="0"><p class="wiki-warning1">Sorry - Unfortunately, no information was returned from Wikipedia.</p><div/>';
                 }                  
                    
                 infowindow.setContent(htmlResult);
@@ -121,7 +121,7 @@ class Marker extends Component {
                                       </p>
                                       <hr />
                                       <h4 tabIndex="0">Infos</h4>
-                                      <div tabIndex="0"><p class="wiki-warning">Unfortunately, no information was returned from Wikipedia.</p><div/>`);
+                                      <div tabIndex="0"><p class="wiki-warning2">Unfortunately, no information was returned from Wikipedia.</p><div/>`);
             }            
             
             infowindow.marker = marker;
