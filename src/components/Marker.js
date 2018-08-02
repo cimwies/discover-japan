@@ -1,5 +1,4 @@
 // Marker.js
-// https://transform.now.sh/
 
 import { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -37,7 +36,7 @@ class Marker extends Component {
         this.marker = new google.maps.Marker(pref);
         const marker = this.marker;
 
-        // Create an onclick event to open the large infowindow at each marker.
+        // Create an onclick event in order to open the large infowindow at each marker.
         let self = this;
         marker.addListener('click', function() {
             self.populateInfoWindow(this, largeInfowindow);
@@ -52,7 +51,7 @@ class Marker extends Component {
 
     populateInfoWindow(marker, infowindow, name) {
 
-        // Prevent opening a window of an already selected marker .
+        // Prevent opening a window of an already selected marker.
         if (infowindow.marker !== marker) {
 
             const { map, google, bounds, name, thumbnailSource, source, wikipedia, wikipediaSource } = this.props;
@@ -113,7 +112,7 @@ class Marker extends Component {
                 infowindow.setContent(htmlResult);
             }
             
-            //if Error in Request
+            //output if there's an Error in the Request
             function requestError(error, part) {
                 console.log(error);
                 infowindow.setContent(`<div class="infowindow-content"><h4>  ${name} </h4>
@@ -136,6 +135,7 @@ class Marker extends Component {
             infowindow.open(map, marker);
             map.fitBounds(bounds);
             map.panTo(marker.getPosition());
+            // move the infowindow 200px downwards in order to fit at least on all portraint screens
             map.panBy(0, -200);
         }
     }

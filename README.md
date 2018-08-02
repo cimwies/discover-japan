@@ -19,11 +19,11 @@ The InfoWindow content includes:
 
 * Title of place
 * A thumnbail image
-* If available a link to the Wikipedia Website
+* A link to the Wikipedia Website
 * A link to the Website
 * A Wikipedia excerpt using the Wikipedia API
 
-Filtering the stored places is possible using the filter function. It will show a list of either all available places or the ones that match the typed text.
+Filtering the stored places is possible using the filter function. It will show a list of either all available places or the ones that match the typed text. Please note, that due to legal restrictions the Google Map individual styling is not working for Korea. Hence the map looks different in these aras at certain zoom factors.
 
 ### How to view
 

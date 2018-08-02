@@ -39,14 +39,14 @@ class Map extends Component {
                 mapTypeControl: mapStyles.mapTypeControl
             })
             
-            //inst. the map            
+            //create map instances            
             this.map = new maps.Map(divMapElement, mapObj);
             //unique instance of Bounds
             this.bounds = new google.maps.LatLngBounds();
             //unique instance of infoWindow
             this.largeInfowindow = new google.maps.InfoWindow();
 
-            //resize the map 
+            //resize the map to make it responsive
             checkSizeWindow(window);
             maps.event.addDomListener(window, 'resize', function(e) {
                 checkSizeWindow(e.currentTarget)
@@ -60,7 +60,7 @@ class Map extends Component {
                 }
             }
 
-            //force the update here to get this.map filled         
+            //force the update here in order to get this.map filled         
             this.forceUpdate();
         } else {
             console.log('Ops!Google Maps API can not be accessed now, please come back later!')
