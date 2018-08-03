@@ -191,7 +191,7 @@ hr {
 /* Error Windows and Colors */
 
 .api-failure-container {
-    height: 100%;
+    height: calc(100vh - 53px);
     width: 100%;
     display: table;
     background-color: #77c4d3;

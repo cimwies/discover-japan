@@ -90,5 +90,6 @@ For Python 3.x, the command is:
 
 ### Image Credits
 
+* Icons credit to Flaticons
 * [A complete list of all image credits is on this repositories Wiki Page Sources](https://github.com/cimwies/discover-japan/wiki/Sources)
 
