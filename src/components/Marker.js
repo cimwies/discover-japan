@@ -61,7 +61,7 @@ class Marker extends Component {
                 marker.setAnimation(null);
             }, 700);
 
-            infowindow.setContent('Loading...');
+            infowindow.setContent('Loading infowindow...');
 
             let wikiData = '';
 
@@ -106,7 +106,7 @@ class Marker extends Component {
                                   '</p>' +
                                   '<hr />' +
                                   '<h4 tabIndex="0">Infos</h4>' +
-                                  '<div tabIndex="0"><p class="wiki-warning1">Sorry - Unfortunately, no information was returned from Wikipedia.</p><div/>';
+                                  '<div tabIndex="0"><p class="wiki-warning1">Sorry, no information about ' + name + ' was returned from Wikipedia.</p><div/>';
                 }                  
                    
                 infowindow.setContent(htmlResult);
@@ -122,7 +122,7 @@ class Marker extends Component {
                                       </p>
                                       <hr />
                                       <h4 tabIndex="0">Infos</h4>
-                                      <div tabIndex="0"><p class="wiki-warning2">oh no, there was an error in your request for ${part}.</p><div/>`);
+                                      <div tabIndex="0"><p class="wiki-warning2">Oh no, there was an error in your request for ${part}.</p><div/>`);
             }            
             
             infowindow.marker = marker;

@@ -9,11 +9,12 @@ import Filter from './components/Filter';
 
 
 class App extends Component {
+    
 
     constructor(props) {
         super(props);
         this.state = {
-            locationsGoogle: []
+            locationsGoogle: [],
         }
         this.markersGoogle = [];
         this.onChangeMarker = this.onChangeMarker.bind(this);
@@ -37,6 +38,7 @@ class App extends Component {
         })
         this.setState({ locationsGoogle: result });   
     }
+    
 
     render = () => {
 
@@ -44,9 +46,9 @@ class App extends Component {
             <div className="App">
                 <Filter handleQuery={this.handleQuery} />
                 <MapContainer 
-                  google={this.props.google}
-                  onChangeMarker={this.onChangeMarker}
-                  locationsGoogle={this.state.locationsGoogle} />
+                    google={this.props.google}
+                    onChangeMarker={this.onChangeMarker}
+                    locationsGoogle={this.state.locationsGoogle} />
             </div>
         );
     }

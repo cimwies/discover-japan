@@ -14,7 +14,7 @@ class Map extends Component {
     componentDidMount() { 
         this.loadMap();
     }
-
+    
     componentDidUpdate(prevProps, prevState) {
         if (prevProps.google !== this.props.google) {
             this.loadMap();
@@ -22,7 +22,9 @@ class Map extends Component {
     }
     
     loadMap() {
+
         if (this.props && this.props.google) {
+
             const {google} = this.props;
             const maps = google.maps;
 
@@ -62,12 +64,14 @@ class Map extends Component {
 
             //force the update here in order to get this.map filled         
             this.forceUpdate();
+
         } else {
             console.log('Ops!Google Maps API can not be accessed now, please come back later!')
             let mapContainerElemt = document.querySelector('.main-container');
             mapContainerElemt.innerHTML = '<div class="error-msg">Ops!Google Maps API can not be accessed now, please come back later! </div>'
         }
     }
+    
 
     render = () => {
 
@@ -79,8 +83,9 @@ class Map extends Component {
         const { onChangeMarker } = this.props;
 
         return (
-            <div ref='map' style={style} className="main-container" >
-                Loading map...
+
+            <div ref='map' style={style} id ="map" className="main-container" role="application"  aria-label="Map showing places" tabIndex="-1" >
+                Loading map ...
                 {locations.locations.map( (location, index) => (
                     <Marker   
                         key = {index} 
@@ -97,8 +102,8 @@ class Map extends Component {
                         wikipedia = {location.wikipedia}
                         wikipediaSource = {location.wikipediaSource}
                         />
-                ))}
-            </div>
+                 ))}
+            </div>      
         );
     }
 }

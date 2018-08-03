@@ -81,6 +81,11 @@ h1 {
     padding: 3px 4px;
 }
 
+.alert-text {
+    text-align: center;
+}
+
+
 /* Main DIVs */
 
 nav {
@@ -184,7 +189,7 @@ hr {
 }
 
 .wiki-warning2 {
-    color: #ea2e49;
+    color: #F65824;
 }
 
 
