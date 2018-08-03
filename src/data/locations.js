@@ -46,7 +46,7 @@ export const locations = [
      },
      {
           type: "Bamboo",
-          icon: "./icons/Garden.png",
+          icon: "./icons/Bamboo.png",
           name: "Hōkoku-ji Bamboo Temple",
           thumbnailSource: "./images/hokoku-ji.jpg",
           source: "http://www.houkokuji.or.jp/english.html",
