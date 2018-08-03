@@ -36,8 +36,7 @@ class ListFilter extends Component {
                     <ul className="list-of-places">
                         {locationsGoogle.filter( location => location.marker.visible === true).map((location, index) => (
                             <li tabIndex = "0" 
-                                role = "button"
-                                aria-label = {location.props.name}
+                                role = "button" 
                                 key = {index} 
                                 onKeyPress = {(event) => this.handlerKeyPress(event, location)}                                  
                                 onClick = {(e) => this.setMarker(location)}

@@ -8,7 +8,7 @@ class Filter extends Component {
     showList() {
         let listFilter = document.getElementsByTagName('aside');
         if(listFilter[0]) {
-            listFilter[0].classList.add('open')
+            listFilter[0].classList.add('open');
         }  
     }
 

@@ -6,6 +6,7 @@ import { GoogleApiWrapper } from 'google-maps-react';
 import * as locations from './data/locations';
 import MapContainer from './components/MapContainer';
 import Filter from './components/Filter';
+import Error from './components/Error';
 
 
 class App extends Component {
@@ -54,6 +55,9 @@ class App extends Component {
     }
 }
 
+const Loading = () => <div><Error /></div>;
+
 export default GoogleApiWrapper({
   apiKey: 'AIzaSyDxdeJwMi4t0vRJ9caA3W5okHasUWracC4',
+  LoadingContainer: Loading
 })(App)

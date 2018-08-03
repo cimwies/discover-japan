@@ -149,7 +149,8 @@ class Marker extends Component {
 export default Marker;
 
 Marker.propTypes = {
-    map: PropTypes.object
+    map: PropTypes.object,
+    infowindow: PropTypes.object
 }   
 
 

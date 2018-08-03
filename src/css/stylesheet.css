@@ -11,9 +11,10 @@ html {
 
 html, 
 body { 
-   height: 100%; 
-   margin: 0; 
-   padding: 0;
+    background-color: #77c4d3;
+    height: 100%; 
+    margin: 0; 
+    padding: 0;
 }
 
 button, 
@@ -82,6 +83,8 @@ h1 {
 }
 
 .alert-text {
+    color: #fff;
+    font-size: 22px;
     text-align: center;
 }
 
@@ -142,6 +145,9 @@ nav {
     cursor: pointer;
 }
 
+.api-failure {
+    padding-top: 48px;
+}
 
 /* Info Window settings */
 

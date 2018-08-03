@@ -24,7 +24,7 @@ class Map extends Component {
     loadMap() {
 
         if (this.props && this.props.google) {
-
+            // // google is available
             const {google} = this.props;
             const maps = google.maps;
 
@@ -68,7 +68,7 @@ class Map extends Component {
         } else {
             console.log('Ops!Google Maps API can not be accessed now, please come back later!')
             let mapContainerElemt = document.querySelector('.main-container');
-            mapContainerElemt.innerHTML = '<div class="error-msg">Ops!Google Maps API can not be accessed now, please come back later! </div>'
+            mapContainerElemt.innerHTML = '<div class="api-failure"><p class="alert-text">Ops!Google Maps API can not be accessed now,<br>please come back later!</p></div>'
         }
     }
 
@@ -109,4 +109,3 @@ class Map extends Component {
 }
 
 export default Map;
-
