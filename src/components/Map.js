@@ -71,7 +71,7 @@ class Map extends Component {
             mapContainerElemt.innerHTML = '<div class="error-msg">Ops!Google Maps API can not be accessed now, please come back later! </div>'
         }
     }
-    
+
 
     render = () => {
 
