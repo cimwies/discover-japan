@@ -145,9 +145,6 @@ nav {
     cursor: pointer;
 }
 
-.api-failure {
-    padding-top: 48px;
-}
 
 /* Info Window settings */
 
@@ -188,6 +185,37 @@ hr {
 .wiki-info {
     font-style: italic;
     padding-top: 5px;
+}
+
+
+/* Error Windows and Colors */
+
+.api-failure-container {
+    height: 100%;
+    width: 100%;
+    display: table;
+    background-color: #77c4d3;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.api-failure {
+    padding-left: 10%;
+    padding-right: 10%;
+    position: static;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.gm-err-container {
+    background-color: #77c4d3;
+}
+
+.gm-err-title,
+.gm-err-message {
+    color: #fff;
+    font: 22px/1.6 'Roboto', sans-serif;
 }
 
 .wiki-warning1 {

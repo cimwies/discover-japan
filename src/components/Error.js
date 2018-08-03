@@ -17,9 +17,11 @@ class Error extends Component {
 	            </nav>
 				<div className="main-container">
 	                <main className="map-container" role="main">
-					    <div className="api-failure">
-						    <p className="alert-text">Sorry, the data could not be loaded.</p>
-						    <p className="alert-text">See the JavaScript console for technical details.</p>
+	                	<div className="api-failure-container">
+						    <div className="api-failure">
+							    <p className="alert-text">Sorry, the data could not be loaded.</p>
+							    <p className="alert-text">See the JavaScript console for technical details.</p>
+						    </div>
 					    </div>
 					</main>
 				</div>
