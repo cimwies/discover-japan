@@ -58,6 +58,6 @@ class App extends Component {
 const Loading = () => <div><Error /></div>;
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyDxdeJwMi4t0vRJ9caA3W5okHasUWracC4',
+  apiKey: 'AIzaSyCBPNM8bF8FBszM5n5KKbbTonBMxGiJMfQ',
   LoadingContainer: Loading
 })(App)
