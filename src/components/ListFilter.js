@@ -34,6 +34,7 @@ class ListFilter extends Component {
                 <h2 className="places">List of favorite places</h2>
                 <div className="list-wrapper-content">
                     <ul className="list-of-places">
+                        // filter, that exclusively shows on the list and on the map the list items matching the typed letters
                         {locationsGoogle.filter( location => location.marker.visible === true).map((location, index) => (
                             <li tabIndex = "0" 
                                 role = "button" 

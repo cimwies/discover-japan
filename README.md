@@ -23,7 +23,7 @@ The InfoWindow content includes:
 * A link to the Website
 * A Wikipedia excerpt using the Wikipedia API
 
-Filtering the stored places is possible using the filter function. It will show a list of either all available places or the ones that match the typed text. Please note, that due to legal restrictions the Google Map individual styling is not working for Korea. Hence the map looks different in these aras at certain zoom factors.
+The app provides a filter option that uses an input field to filter both the list view and the map markers displayed by default on load. The list view and the markers update accordingly in real time. Please note, that due to legal restrictions the Google Map individual styling is not working for Korea. Hence the map looks different in these aras at certain zoom factors.
 
 ### How to view
 
