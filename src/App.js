@@ -64,6 +64,7 @@ class App extends Component {
 
 
         return (
+            <div className="App">
                 <Filter handleQuery = {this.handleQuery} />
                 <MapContainer 
                     google = {this.props.google}
