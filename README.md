@@ -10,6 +10,7 @@ Udacity FEND Nanodegree Program - Project #8
 * Info material
 * Image Credits
 * [Discover Japan Wiki](https://github.com/cimwies/discover-japan/wiki)
+* App development based on
 
 ### Specification
 
@@ -24,6 +25,7 @@ The InfoWindow content includes:
 * A Wikipedia excerpt using the Wikipedia API
 
 The app provides a filter option that uses an input field to filter both the list view and the map markers displayed by default on load. The list view and the markers update accordingly in real time. Please note, that due to legal restrictions the Google Map individual styling is not working for Korea. Hence the map looks different in these aras at certain zoom factors.
+If something goes wrong in the process of either loading the Google API, or with the WikiPedia API, different error windows and / or messages are shown.
 
 ### How to view
 
@@ -92,4 +94,9 @@ For Python 3.x, the command is:
 
 * Icons credit to Flaticons
 * [A complete list of all image credits is on this repositories Wiki Page Sources](https://github.com/cimwies/discover-japan/wiki/Sources)
+
+
+### App development based on
+
+[Google Map React Component Tutorial](https://github.com/fullstackreact/google-maps-react)
 

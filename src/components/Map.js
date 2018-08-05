@@ -6,13 +6,23 @@ import mapStyles from '../data/mapStyles';
 import * as locations from '../data/locations';
 import * as constants from '../data/constants';
 import Marker from './Marker';
+import Error from "./Error";
 
 
 class Map extends Component {
 
+    state = {
+        error: false
+    };
+
 
     componentDidMount() { 
         this.loadMap();
+        // handle error, when google map fails to load
+        window.gm_authFailure = () => this.setState({ error: true });
+        if (window.google === undefined) {
+          this.setState({ error: true });
+        }
     }
     
     componentDidUpdate(prevProps, prevState) {
@@ -24,7 +34,7 @@ class Map extends Component {
     loadMap() {
 
         if (this.props && this.props.google) {
-            // // google is available
+            // google is available
             const {google} = this.props;
             const maps = google.maps;
 
@@ -66,14 +76,22 @@ class Map extends Component {
             this.forceUpdate();
 
         } else {
-            console.log('Ops!Google Maps API can not be accessed now, please come back later!')
-            let mapContainerElemt = document.querySelector('.main-container');
-            mapContainerElemt.innerHTML = '<div class="api-failure"><p class="alert-text">Ops!Google Maps API can not be accessed now,<br>please come back later!</p></div>'
+           console.log('Ops!Google Maps can not be accessed now, please come back later!' )
+            let mapContainerElemt = document.querySelector('.map-container');
+            mapContainerElemt.innerHTML = '<div class="api-failure-container">' +
+                                                '<div class="alert-icon"></div>' +
+                                                '<div class="api-failure">' +
+                                                    '<p class="alert-text">Ops! Sorry<br>Google Maps can not be accessed right now,<br>' +
+                                                    'please come back later!</p>' +
+                                                '</div>' +
+                                            '</div>'       
         }
     }
 
 
     render = () => {
+
+        const noError = !this.state.error;
 
         const style = {
             width: '100%',
@@ -84,6 +102,10 @@ class Map extends Component {
 
         return (
 
+            <div>
+
+            {noError ? (
+          
             <div ref='map' style={style} id ="map" className="main-container" role="application"  aria-label="Map showing places" tabIndex="-1" >
                 Loading map ...
                 {locations.locations.map( (location, index) => (
@@ -103,7 +125,15 @@ class Map extends Component {
                         wikipediaSource = {location.wikipediaSource}
                         />
                  ))}
-            </div>      
+            </div> 
+
+
+            ) : (
+                <Error />
+            )}
+
+            </div>
+                 
         );
     }
 }

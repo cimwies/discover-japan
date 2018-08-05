@@ -82,12 +82,6 @@ h1 {
     padding: 3px 4px;
 }
 
-.alert-text {
-    color: #fff;
-    font-size: 22px;
-    text-align: center;
-}
-
 
 /* Main DIVs */
 
@@ -208,14 +202,15 @@ hr {
     display: table-cell;
 }
 
-.gm-err-container {
-    background-color: #77c4d3;
+.alert-icon {
+    background: url('/icons/icon_error.png') no-repeat center center;
+    height: 54px;
 }
 
-.gm-err-title,
-.gm-err-message {
+.alert-text {
     color: #fff;
-    font: 22px/1.6 'Roboto', sans-serif;
+    font-size: 22px;
+    text-align: center;
 }
 
 .wiki-warning1 {
@@ -229,7 +224,7 @@ hr {
 
 /* Media Queries */
 
-@media (min-width: 400px) and (max-width: 599px) {
+@media only screen and (min-width: 400px) and (max-width: 599px) {
 
     body, 
     h1,
@@ -265,7 +260,7 @@ hr {
 }
 
 
-@media (min-width: 600px) {
+@media only screen and (min-width: 600px) {
 
     body, 
     h1,

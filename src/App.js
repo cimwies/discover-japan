@@ -6,7 +6,6 @@ import { GoogleApiWrapper } from 'google-maps-react';
 import * as locations from './data/locations';
 import MapContainer from './components/MapContainer';
 import Filter from './components/Filter';
-import Error from './components/Error';
 
 
 class App extends Component {
@@ -45,19 +44,16 @@ class App extends Component {
 
         return (
             <div className="App">
-                <Filter handleQuery={this.handleQuery} />
+                <Filter handleQuery = {this.handleQuery} />
                 <MapContainer 
-                    google={this.props.google}
-                    onChangeMarker={this.onChangeMarker}
-                    locationsGoogle={this.state.locationsGoogle} />
+                    google = {this.props.google}
+                    onChangeMarker = {this.onChangeMarker}
+                    locationsGoogle = {this.state.locationsGoogle} />
             </div>
         );
     }
 }
 
-const Loading = () => <div><Error /></div>;
-
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyCBPNM8bF8FBszM5n5KKbbTonBMxGiJMfQ',
-  LoadingContainer: Loading
+  apiKey:'AIzaSyCBPNM8bF8FBszM5n5KKbbTonBMxGiJMfQ',
 })(App)
