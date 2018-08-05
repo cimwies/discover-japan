@@ -17,7 +17,7 @@ class Map extends Component {
 
     componentDidMount() { 
         this.loadMap();
-        // handle error, when google map fails to load
+        // handle error, when google map fails to load due to wrong API for example
         window.gm_authFailure = () => this.setState({ error: true });
         if (window.google === undefined) {
           this.setState({ error: true });
