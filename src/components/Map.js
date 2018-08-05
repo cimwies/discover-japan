@@ -12,9 +12,8 @@ import Error from "./Error";
 class Map extends Component {
 
     state = {
-        error: false
+        error: false,
     };
-
 
     componentDidMount() { 
         this.loadMap();
@@ -76,12 +75,12 @@ class Map extends Component {
             this.forceUpdate();
 
         } else {
-           console.log('Ops!Google Maps can not be accessed now, please come back later!' )
+           console.log('Ops! Google Maps cant be accessed now, please come back later!' )
             let mapContainerElemt = document.querySelector('.map-container');
             mapContainerElemt.innerHTML = '<div class="api-failure-container">' +
                                                 '<div class="alert-icon"></div>' +
                                                 '<div class="api-failure">' +
-                                                    '<p class="alert-text">Ops! Sorry<br>Google Maps can not be accessed right now,<br>' +
+                                                    '<p class="alert-text">Ops! Sorry<br>Google Maps cant be accessed right now,<br>' +
                                                     'please come back later!</p>' +
                                                 '</div>' +
                                             '</div>'       
@@ -91,49 +90,43 @@ class Map extends Component {
 
     render = () => {
 
-        const noError = !this.state.error;
-
+        
         const style = {
             width: '100%',
             height: '100vh'
           }
 
         const { onChangeMarker } = this.props;
+        const noError = !this.state.error;
 
         return (
 
             <div>
-
-            {noError ? (
-          
-            <div ref='map' style={style} id ="map" className="main-container" role="application"  aria-label="Map showing places" tabIndex="-1" >
-                Loading map ...
-                {locations.locations.map( (location, index) => (
-                    <Marker   
-                        key = {index} 
-                        google = {this.props.google}
-                        map = {this.map}
-                        name = {location.name}
-                        position ={location.coordinates} 
-                        bounds = {this.bounds}
-                        largeInfowindow = {this.largeInfowindow}
-                        onChangeMarker = {onChangeMarker} 
-                        icon = {location.icon}
-                        thumbnailSource = {location.thumbnailSource}
-                        source = {location.source}
-                        wikipedia = {location.wikipedia}
-                        wikipediaSource = {location.wikipediaSource}
-                        />
-                 ))}
-            </div> 
-
-
-            ) : (
-                <Error />
-            )}
-
-            </div>
-                 
+                {noError ? (
+                    <div ref='map' style={style} id ="map" className="main-container" role="application"  aria-label="Map showing places" tabIndex="-1" >
+                        Loading map ...
+                        {locations.locations.map( (location, index) => (
+                            <Marker   
+                                key = {index} 
+                                google = {this.props.google}
+                                map = {this.map}
+                                name = {location.name}
+                                position ={location.coordinates} 
+                                bounds = {this.bounds}
+                                largeInfowindow = {this.largeInfowindow}
+                                onChangeMarker = {onChangeMarker} 
+                                icon = {location.icon}
+                                thumbnailSource = {location.thumbnailSource}
+                                source = {location.source}
+                                wikipedia = {location.wikipedia}
+                                wikipediaSource = {location.wikipediaSource}
+                                />
+                         ))}
+                    </div> 
+                ) : (
+                    <Error />
+                )}     
+            </div>       
         );
     }
 }

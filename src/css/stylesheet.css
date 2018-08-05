@@ -184,6 +184,7 @@ hr {
 
 /* Error Windows and Colors */
 
+.network-failure-container,
 .api-failure-container {
     height: calc(100vh - 53px);
     width: 100%;
