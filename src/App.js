@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
         let mapContainerElement = document.querySelector('#root');
         let errorElement = document.createElement('div');
         errorElement.innerHTML = '<div class="network-failure-container">' +
-                                    '<div class="alert-icon"></div>' +
                                     '<div class="api-failure">' +
+                                        '<div class="alert-icon"></div>' +
                                         '<p class="alert-text">Ops! Sorry<br>Google Maps cant be accessed right now,<br>' +
                                         'please check your internet connection!</p>' +
                                     '</div>' +

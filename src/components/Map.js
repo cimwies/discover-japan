@@ -78,8 +78,8 @@ class Map extends Component {
            console.log('Ops! Google Maps cant be accessed now, please come back later!' )
             let mapContainerElemt = document.querySelector('.map-container');
             mapContainerElemt.innerHTML = '<div class="api-failure-container">' +
-                                                '<div class="alert-icon"></div>' +
                                                 '<div class="api-failure">' +
+                                                    '<div class="alert-icon"></div>' +
                                                     '<p class="alert-text">Ops! Sorry<br>Google Maps cant be accessed right now,<br>' +
                                                     'please come back later!</p>' +
                                                 '</div>' +
