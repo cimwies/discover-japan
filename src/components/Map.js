@@ -89,6 +89,7 @@ class Map extends Component {
 
 
     render = () => {
+        
      
         const style = {
             width: '100%',

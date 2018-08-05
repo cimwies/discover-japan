@@ -11,8 +11,10 @@ class Filter extends Component {
             listFilter[0].classList.add('open');
         }  
     }
+    
 
     render = () => {
+
 
         const { handleQuery } = this.props;
 

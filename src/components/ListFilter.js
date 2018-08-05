@@ -22,7 +22,9 @@ class ListFilter extends Component {
         }
     }
 
+
     render = () => {
+
 
         const { locationsGoogle } = this.props;
 
