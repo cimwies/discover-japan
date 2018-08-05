@@ -8,7 +8,7 @@ import MapContainer from './components/MapContainer';
 import Filter from './components/Filter';
 
 
-//error handling - no internet connection 
+//error handling - message due to for example internet connection problem 
 document.addEventListener("DOMContentLoaded", function(e) {
     let scriptTag = document.getElementsByTagName('SCRIPT').item(1);
     scriptTag.onerror = function(e) {

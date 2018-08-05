@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 
 class Marker extends Component {
 
-
     componentDidUpdate(prevProps) {
 
         if ((this.props.map !== prevProps.map) ||
@@ -17,6 +16,7 @@ class Marker extends Component {
 
 
     renderMarker = () => {
+      
 
         if (this.marker) {
             this.marker.setMap(null);

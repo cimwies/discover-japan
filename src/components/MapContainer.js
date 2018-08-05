@@ -6,7 +6,7 @@ import ListFilter from './ListFilter';
 
 
 export default class MapContainer extends Component {
-    
+
 
     render = () => {
 
@@ -14,6 +14,7 @@ export default class MapContainer extends Component {
         const { google, onChangeMarker, locationsGoogle } = this.props;
    
         return (
+
             <div className="main-container">
                <ListFilter locationsGoogle={locationsGoogle} />
                 <main className="map-container" role="main">
@@ -23,6 +24,7 @@ export default class MapContainer extends Component {
                     /> 
                 </main>
             </div>
+            
         );
     }
 }
